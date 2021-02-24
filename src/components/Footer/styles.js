@@ -19,7 +19,11 @@ const Root = styled.footer`
     position: absolute;
     box-shadow: 0 0 8px #1fde6f;
     
-    z-index: 1; 
+    z-index: 1;
+    
+    @media (max-width: 580px) {
+      display: none;
+    }
   }
 `
 
@@ -36,9 +40,14 @@ const Inner = styled.ul`
   z-index: 2;
   
   @media (max-width: 580px) {
-    width: 260px;
-    font-size: 16px;
+    width: 100%;
+    justify-content: space-evenly;
+    
+    & li {
+      font-size: 16px;
+      letter-spacing: 3px;
+    }
   }
 `
 
-export { Root,Inner }
+export { Root, Inner }
